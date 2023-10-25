@@ -17,7 +17,7 @@ $ node {name of file}
 # send_email_with_attachments.js
 # send_email_with_embedded_images.js
 # send_calendar_events.js
-
-# Visit http://localhost:4000
+# send_multiple_recipients_cc_bcc.js
+# send_async_await.js
 ```
 

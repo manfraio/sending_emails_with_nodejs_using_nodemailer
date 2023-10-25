@@ -42,9 +42,10 @@ app.get('/', async (req, res) => {
         to: 'email@domain.com',
         subject: 'Email test',
         text: 'Appointment in attach',
+        contentType: 'text/calendar',
         icalEvent: {
-            method: 'REQUEST',
-            content: new Buffer.from(calendar.toString())
+            method: 'PUBLISH',
+            content: __dirname + '/attachments/invitation.ics'
         }
     }
 

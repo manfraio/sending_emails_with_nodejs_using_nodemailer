@@ -15,13 +15,11 @@ function sendEmail() {
             name: 'John Doe',
             address: 'john.doe@domain.com'
         },
-        to: 'user@domain.com',
+        to: ['user@domain.com', 'second.user@domain.com', 'another.user@domain.com'],
+        cc: 'copy@domain.com',
+        bcc: 'bcc@domain.com',
         subject: 'Email test',
-        html: `
-            <h3 style="color: #36ba9b;">Hello user,</h3>
-            <p style="color: #555;">This email was sent using Node.js with <b>Nodemailer</b></p>
-            <p style="color: #ccc; font-weight: bold;">Regards, <br>John Doe</p>
-        `
+        text: 'Email sent with Node.js using Nodemailer!'  
     }
 
     transport.sendMail(mailOptions, (err, info) => {
